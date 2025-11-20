@@ -10,21 +10,21 @@ const navItems = [
 
 export default function Navbar() {
   return (
-    <header className="border-b border-slate-800/60 bg-white backdrop-blur sticky top-0 z-20">
-      <nav className="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link href="/" className="font-semibold tracking-tight text-lg">
-          <span className="text-pink-500">Thanh</span> Vo-Pham
-        </Link>
-        <div className="flex gap-4 text-sm">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="hover:text-pink-500 transition-colors"
-            >
-              {item.label}
-            </Link>
+    <header className="border-b border-pink-200/50 bg-white/60 backdrop-blur-md sticky top-0 z-20">
+      <nav className="max-w-5xl mx-auto px-4 py-4 flex justify-center">
+        <div className="flex items-center gap-3 sm:gap-5 text-sm text-slate-600">
+
+          {navItems.map((item, idx) => (
+            <div key={item.href} className="flex items-center">
+              <Link
+                href={item.href}
+                className="hover:text-pink-500 transition-colors"
+              >
+                {item.label}
+              </Link>
+            </div>
           ))}
+
         </div>
       </nav>
     </header>

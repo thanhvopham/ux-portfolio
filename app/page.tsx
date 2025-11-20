@@ -1,58 +1,48 @@
-// app/page.js
-import Link from 'next/link';
-import { projects } from '../lib/project';
-import ProjectCard from './components/ProjectCard';
+// app/page.tsx
+import Link from "next/link";
+import { Italiana } from "next/font/google";
+
+const italiana = Italiana({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export default function HomePage() {
-  const featured = projects.slice(0, 3);
-
   return (
-    <div className="space-y-10">
-      {/* Hero */}
-      <section className="space-y-4">
-        <p className="text-sm uppercase tracking-[0.2em] text-pink-500/80">
+    <div className="relative min-h-[70vh] flex items-center justify-center px-6">
+      <section className="max-w-4xl w-full bg-pink-50/70 border border-pink-100 rounded-3xl px-8 sm:px-14 py-16 shadow-sm text-center">
+        {/* Label */}
+        <p className="text-[11px] uppercase tracking-[0.25em] text-pink-500/80 mb-6">
           UX / UI · Front-End · Psychology
         </p>
-        <h1 className="text-3xl sm:text-4xl font-semibold leading-tight">
-          I design digital experiences that blend{' '}
-          <span className="text-pink-500">psychology</span> and{' '}
-          <span className="text-pink-500">technology</span>.
+
+        {/* Name */}
+        <h1
+          className={`${italiana.className} text-5xl sm:text-6xl md:text-7xl leading-tight text-slate-900`}
+        >
+          Thanh Vo-Pham
         </h1>
-        <p className="text-sm sm:text-base text-slate-800">
-          I’m Thanh, a UX/UI designer and front-end developer with a background in psychology. I specialise in creating user experiences that are
-          not only beautiful but grounded in research, accessibility, and human behaviour.
+
+        {/* Description */}
+        <p className="text-base sm:text-lg text-slate-700 max-w-xl mx-auto mt-4">
+          UX/UI designer and front-end developer with a background in
+          psychology, creating calm, thoughtful digital experiences.
         </p>
-        <div className="flex gap-3">
+
+        {/* Buttons */}
+        <div className="mt-8 flex justify-center flex-wrap gap-3">
           <Link
             href="/projects"
-            className="px-4 py-2 rounded-full bg-pink-500 text-white font-medium text-sm hover:bg-pink-400 transition-colors"
+            className="px-5 py-2.5 rounded-full bg-pink-500 text-white text-sm font-medium hover:bg-pink-400 transition-colors"
           >
             View my work
           </Link>
           <Link
             href="/about"
-            className="px-4 py-2 rounded-full border border-slate-300 text-sm hover:border-pink-400 hover:text-pink-500 transition-colors"
+            className="px-5 py-2.5 rounded-full border border-pink-300 text-sm text-pink-600 hover:border-pink-500 hover:text-pink-700 transition-colors"
           >
             About me
           </Link>
-        </div>
-      </section>
-
-      {/* Featured Projects */}
-      <section className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h2 className="text-xl font-semibold">Selected projects</h2>
-          <Link
-            href="/projects"
-            className="text-xs text-pink-500 hover:text-pink-400"
-          >
-            View all
-          </Link>
-        </div>
-        <div className="grid gap-4 sm:grid-cols-2">
-          {featured.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
         </div>
       </section>
     </div>

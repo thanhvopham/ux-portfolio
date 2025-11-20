@@ -3,6 +3,18 @@ import type { ReactNode } from "react";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import CherryBlossomBackground from "./components/CherryBlossomBackground";
+import { Italiana, DM_Sans } from "next/font/google";
+
+const italiana = Italiana({
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const dmsans = DM_Sans({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Thanh Vo-Pham | UX/UI Designer",
@@ -17,9 +29,12 @@ type RootLayoutProps = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className="bg-white text-slate-900">
-        <div className="min-h-screen flex flex-col">
+      <body className={`${dmsans.className} bg-white text-slate-900`}>
+        <div className="relative min-h-screen flex flex-col">
           <Navbar />
+
+          <CherryBlossomBackground />
+
           <main className="flex-1 w-full max-w-5xl mx-auto px-4 py-10">
             {children}
           </main>
