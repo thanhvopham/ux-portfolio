@@ -18,7 +18,7 @@ export default function ContactPage() {
           <span className="font-medium text-slate-200">Email:</span>{' '}
           <a
             href="mailto:your.email@example.com"
-            className="text-emerald-300 hover:text-emerald-200"
+            className="text-pink-500 hover:text-pink-500"
           >
             thanhthanh03@hotmail.com
           </a>
@@ -29,7 +29,7 @@ export default function ContactPage() {
             href="https://www.linkedin.com"
             target="_blank"
             rel="noreferrer"
-            className="text-emerald-300 hover:text-emerald-200"
+            className="text-pink-500 hover:text-pink-500"
           >
             www.linkedin.com/in/thanh-thanh-vo-pham-aa1417269
           </a>
