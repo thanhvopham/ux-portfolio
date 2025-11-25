@@ -6,9 +6,9 @@ export const metadata = {
 
 export default function ContactPage() {
   return (
-    <div className="space-y-6 max-w-xl">
+    <div className="space-y-6 max-w">
       <h1 className="text-2xl font-semibold">Contact</h1>
-      <p className="text-sm text-slate-300">
+      <p className="text-sm text-slate-800">
         I’m open to internships, junior roles, and collaborations in UX/UI,
         front-end development, and research-driven design.
       </p>
@@ -20,7 +20,7 @@ export default function ContactPage() {
             href="mailto:your.email@example.com"
             className="text-emerald-300 hover:text-emerald-200"
           >
-            your.email@example.com
+            thanhthanh03@hotmail.com
           </a>
         </p>
         <p>
@@ -31,7 +31,7 @@ export default function ContactPage() {
             rel="noreferrer"
             className="text-emerald-300 hover:text-emerald-200"
           >
-            Your LinkedIn profile
+            www.linkedin.com/in/thanh-thanh-vo-pham-aa1417269
           </a>
         </p>
       </div>
