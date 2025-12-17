@@ -1,6 +1,6 @@
 import type { JSX } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import { PageHeading, SectionHeading } from "../../components/Typography";
 
 export const metadata = {
   title: "MQI Notion AI Chatbot | Thanh Vo-Pham",
@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function MQIChatbotPage(): JSX.Element {
   return (
-    <article className="space-y-10">
+    <article className="space-y-10 p-6 sm:p-8 rounded-2xl border border-slate-800/80 bg-pink-200/20">
       <Link
         href="/projects"
         className="text-m text-pink-500 hover:text-pink-600"
@@ -19,12 +19,7 @@ export default function MQIChatbotPage(): JSX.Element {
       </Link>
 
       <header className="space-y-4">
-        <p className="text-[11px] uppercase tracking-[0.25em] text-pink-500/80">
-          Web app · AI · Knowledge management
-        </p>
-        <h1 className="text-3xl sm:text-4xl font-semibold">
-          MQI Notion AI Chatbot
-        </h1>
+        <PageHeading eyebrow="Case Study">MQI Notion AI Chatbot</PageHeading>
         <p className="text-sm text-slate-700 max-w">
           An AI-powered interface that lets Macquarie University Incubator staff
           and founders query internal Notion documentation conversationally.
@@ -43,7 +38,7 @@ export default function MQIChatbotPage(): JSX.Element {
       </header>
 
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold">Problem</h2>
+        <SectionHeading>Problem</SectionHeading>
         <p className="text-sm text-slate-700 max-w">
           The incubator team had a growing Notion workspace full of processes,
           FAQs and resources. New staff and founders struggled to know where to
@@ -53,7 +48,7 @@ export default function MQIChatbotPage(): JSX.Element {
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold">My Role</h2>
+        <SectionHeading>My Role</SectionHeading>
         <ul className="text-sm text-slate-700 list-disc list-inside space-y-1 max-w">
           <li>Mapped key user journeys for staff and founders.</li>
           <li>
@@ -73,7 +68,7 @@ export default function MQIChatbotPage(): JSX.Element {
 
       {/* UI design */}
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold">UI Design</h2>
+        <SectionHeading>UI Design</SectionHeading>
         <p className="text-sm text-slate-700 max-w">
           The interface is intentionally simple: a focused chat panel, clear
           answer blocks, and subtle highlighting of the most important sentence.
@@ -93,7 +88,7 @@ export default function MQIChatbotPage(): JSX.Element {
       </section>
 
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold">Reflection</h2>
+        <SectionHeading>Reflection</SectionHeading>
         <p className="text-sm text-slate-700 max-w-2xl">
           This project strengthened my ability to think across UX, information
           architecture, and AI behaviour. I learned how retrieval decisions

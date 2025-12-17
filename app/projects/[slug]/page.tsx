@@ -30,7 +30,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <article className="space-y-8">
+    <article className="space-y-8 p-5 sm:p-7 rounded-2xl border border-slate-800/80 bg-pink-200/20">
       <Link
         href="/projects"
         className="text-xs text-slate-400 hover:text-emerald-300"

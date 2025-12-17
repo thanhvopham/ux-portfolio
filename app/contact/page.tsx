@@ -1,13 +1,14 @@
 // app/contact/page.js
+import { PageHeading } from "../components/Typography";
 
 export const metadata = {
-  title: 'Contact | Thanh Vo-Pham'
+  title: "Contact | Thanh Vo-Pham",
 };
 
 export default function ContactPage() {
   return (
     <div className="space-y-6 max-w">
-      <h1 className="text-2xl font-semibold">Contact</h1>
+      <PageHeading>Contact</PageHeading>
       <p className="text-sm text-slate-800">
         I’m open to internships, junior roles, and collaborations in UX/UI,
         front-end development, and research-driven design.
@@ -15,7 +16,7 @@ export default function ContactPage() {
 
       <div className="space-y-3 text-sm">
         <p>
-          <span className="font-medium text-slate-200">Email:</span>{' '}
+          <span className="font-medium text-slate-800">Email:</span>{' '}
           <a
             href="mailto:your.email@example.com"
             className="text-pink-500 hover:text-pink-500"
@@ -24,7 +25,7 @@ export default function ContactPage() {
           </a>
         </p>
         <p>
-          <span className="font-medium text-slate-200">LinkedIn:</span>{' '}
+          <span className="font-medium text-slate-800">LinkedIn:</span>{' '}
           <a
             href="https://www.linkedin.com"
             target="_blank"

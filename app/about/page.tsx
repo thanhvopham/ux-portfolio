@@ -1,5 +1,6 @@
 // app/about/page.tsx
 import Image from "next/image";
+import { PageHeading } from "../components/Typography";
 
 export const metadata = {
   title: "About | Thanh Vo-Pham",
@@ -8,25 +9,12 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-16">
-      <h1 className="text-3xl sm:text-4xl font-semibold text-center mb-12">
-        About Me
-      </h1>
+      <div className="flex justify-left mb-10">
+        <PageHeading align="left">About Me</PageHeading>
+      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-
-        <div className="flex justify-center">
-          <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-3xl overflow-hidden border border-pink-200 shadow-sm bg-pink-50">
-            <Image
-              src="/images/me.png"       
-              alt="Portrait of Thanh Vo-Pham"
-              width={600}
-              height={600}
-              className="object-cover w-full h-full"
-            />
-          </div>
-        </div>
-
-        <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed">
+      <div className="grid grid-cols-1 md:grid-cols-[1.2fr_0.8fr] gap-y-10 md:gap-x-2 items-start">
+        <div className="space-y-4 text-slate-700 text-sm sm:text-base leading-relaxed bg-pink-50/70 border border-pink-100 rounded-3xl p-6 sm:p-8 shadow-sm">
           <p>
             Hi, I’m Thanh! I'm an aspiring UX/UI designer and front-end developer working at
             the intersection of design, psychology, and technology. I love
@@ -53,6 +41,18 @@ export default function AboutPage() {
             and drinking iced matcha while building side projects that make life
             a little nicer ✧.
           </p>
+        </div>
+
+        <div className="flex justify-center md:justify-end">
+          <div className="w-64 h-64 sm:w-72 sm:h-72 rounded-3xl overflow-hidden border border-pink-200 shadow-sm bg-pink-50">
+            <Image
+              src="/images/me.png"
+              alt="Portrait of Thanh Vo-Pham"
+              width={600}
+              height={600}
+              className="object-cover w-full h-full"
+            />
+          </div>
         </div>
       </div>
     </div>

@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function HavenPage(): JSX.Element {
   return (
-    <article className="space-y-10">
+    <article className="space-y-10 p-6 sm:p-8 rounded-2xl border border-slate-800/80 bg-pink-200/20">
       <Link
         href="/projects"
         className="text-m text-pink-500 hover:text-pink-600"
@@ -19,9 +19,6 @@ export default function HavenPage(): JSX.Element {
       </Link>
 
       <header className="space-y-4">
-        <p className="text-[11px] uppercase tracking-[0.25em] text-pink-500/80">
-          Concept · Inclusive design · Location-based
-        </p>
         <h1 className="text-3xl sm:text-4xl font-semibold">Haven – Safe Spaces Finder</h1>
         <p className="text-sm text-slate-700 max-w">
           Haven is a concept app that helps neurodivergent, queer, and other

@@ -1,6 +1,6 @@
 import type { JSX } from "react";
-import Image from "next/image";
 import Link from "next/link";
+import { PageHeading, SectionHeading } from "../../components/Typography";
 
 export const metadata = {
   title: "PantryPal | Thanh Vo-Pham",
@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function PantryPalPage(): JSX.Element {
   return (
-    <article className="space-y-10">
+    <article className="space-y-10 p-6 sm:p-8 rounded-2xl border border-slate-800/80 bg-pink-200/20">
       <Link
         href="/projects"
         className="text-m text-pink-500 hover:text-pink-600"
@@ -20,10 +20,7 @@ export default function PantryPalPage(): JSX.Element {
 
       {/* Hero */}
       <header className="space-y-4">
-        <p className="text-[11px] uppercase tracking-[0.25em] text-pink-500/80">
-          Mobile app · Sustainability · AI
-        </p>
-        <h1 className="text-3xl sm:text-4xl font-semibold">PantryPal</h1>
+        <PageHeading eyebrow="Case Study">PantryPal</PageHeading>
         <p className="text-sm text-slate-700 max-w">
           PantryPal is a mobile app that helps users reduce food waste by
           tracking ingredient expiry dates and suggesting recipes based on what
@@ -47,7 +44,7 @@ export default function PantryPalPage(): JSX.Element {
 
       {/* Overview / Problem */}
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold">Problem & Goals</h2>
+        <SectionHeading>Problem & Goals</SectionHeading>
         <p className="text-sm text-slate-700 max-w">
           Australian households waste billions of dollars worth of food every
           year. People forget what is in their pantry, lose track of expiry
@@ -65,7 +62,7 @@ export default function PantryPalPage(): JSX.Element {
 
       {/* Research */}
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold">Research & Insights</h2>
+        <SectionHeading>Research & Insights</SectionHeading>
         <p className="text-sm text-slate-700 max-w">
           I ran quick interviews and surveys with students and young adults to
           understand their food routines. Key insights:
@@ -82,7 +79,7 @@ export default function PantryPalPage(): JSX.Element {
 
       {/* Visual design */}
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold">Visual Design and Figma Prototype</h2>
+        <SectionHeading>Visual Design and Figma Prototype</SectionHeading>
         <p className="text-sm text-slate-700 max-w">
           The final UI uses a calm, sustainable palette (greens, creams and
           neutrals), rounded cards and clear hierarchy to support stress-free
@@ -105,7 +102,7 @@ export default function PantryPalPage(): JSX.Element {
 
       {/* Development & collaboration */}
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold">Development & Collaboration</h2>
+        <SectionHeading>Development & Collaboration</SectionHeading>
         <p className="text-sm text-slate-700 max-w">
           I built the first MVP in Flutter, then migrated the front-end to React
           Native for better scalability. Scott, my teammate, designed and hosted
@@ -117,7 +114,7 @@ export default function PantryPalPage(): JSX.Element {
 
       {/* Results */}
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold">Results & Impact</h2>
+        <SectionHeading>Results & Impact</SectionHeading>
         <ul className="text-sm text-slate-700 list-disc list-inside space-y-1 max-w">
           <li>Working MVP used in live demos for the Tech to the Power of Us showcase.</li>
           <li>90% of testers said the app increased their awareness of expiry dates.</li>
@@ -130,7 +127,7 @@ export default function PantryPalPage(): JSX.Element {
 
       {/* Reflection */}
       <section className="space-y-4">
-        <h2 className="text-xl font-semibold">What I Learned</h2>
+        <SectionHeading>What I Learned</SectionHeading>
         <p className="text-sm text-slate-700 max-w">
           PantryPal taught me how tightly UX is connected to backend design.
           Working closely with Scott helped me design interfaces that reflect
